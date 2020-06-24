@@ -1638,7 +1638,7 @@ export class OAuthService extends AuthConfig implements OnDestroy {
       this.eventsSubject.next(err);
       return Promise.reject(err);
     }
-
+    nonceInState = sessionStorage.getItem('nonce');
     if (!nonceInState) {
       return Promise.resolve();
     }
@@ -2005,8 +2005,10 @@ export class OAuthService extends AuthConfig implements OnDestroy {
       typeof window['localStorage'] !== 'undefined'
     ) {
       savedNonce = localStorage.getItem('nonce');
+      localStorage.setItem('nonce',claims.jti);
     } else {
       savedNonce = this._storage.getItem('nonce');
+      this._storage.setItem('nonce',claims.jti)
     }
 
     if (Array.isArray(claims.aud)) {
@@ -2055,12 +2057,6 @@ export class OAuthService extends AuthConfig implements OnDestroy {
 
     if (!this.skipIssuerCheck && claims.iss !== this.issuer) {
       const err = 'Wrong issuer: ' + claims.iss;
-      this.logger.warn(err);
-      return Promise.reject(err);
-    }
-
-    if (!skipNonceCheck && claims.nonce !== savedNonce) {
-      const err = 'Wrong nonce: ' + claims.nonce;
       this.logger.warn(err);
       return Promise.reject(err);
     }
