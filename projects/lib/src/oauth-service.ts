@@ -391,11 +391,11 @@ export class OAuthService extends AuthConfig implements OnDestroy {
 
   protected setupExpirationTimers(): void {
     if (this.hasValidAccessToken()) {
-      this.setupAccessTokenTimer();
+      //this.setupAccessTokenTimer();
     }
 
     if (this.hasValidIdToken()) {
-      this.setupIdTokenTimer();
+      //this.setupIdTokenTimer();
     }
   }
 
