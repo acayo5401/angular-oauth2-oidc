@@ -192,11 +192,11 @@ export declare class OAuthService extends AuthConfig implements OnDestroy {
     initImplicitFlowInPopup(options?: {
         height?: number;
         width?: number;
-    }): Promise<unknown>;
+    }): Promise<any>;
     initLoginFlowInPopup(options?: {
         height?: number;
         width?: number;
-    }): Promise<unknown>;
+    }): Promise<any>;
     protected calculatePopupFeatures(options: {
         height?: number;
         width?: number;
