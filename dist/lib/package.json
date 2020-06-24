@@ -1,0 +1,27 @@
+{
+  "name": "angular-oauth2-oidc",
+  "license": "MIT",
+  "author": {
+    "name": "Manfred Steyer"
+  },
+  "version": "9.2.2",
+  "repository": "manfredsteyer/angular-oauth2-oidc",
+  "dependencies": {
+    "js-sha256": "^0.9.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=8.0.0",
+    "@angular/core": ">=8.0.0",
+    "tslib": "^1.10.0"
+  },
+  "main": "bundles/angular-oauth2-oidc.umd.js",
+  "module": "fesm5/angular-oauth2-oidc.js",
+  "es2015": "fesm2015/angular-oauth2-oidc.js",
+  "esm5": "esm5/angular-oauth2-oidc.js",
+  "esm2015": "esm2015/angular-oauth2-oidc.js",
+  "fesm5": "fesm5/angular-oauth2-oidc.js",
+  "fesm2015": "fesm2015/angular-oauth2-oidc.js",
+  "typings": "angular-oauth2-oidc.d.ts",
+  "metadata": "angular-oauth2-oidc.metadata.json",
+  "sideEffects": false
+}
