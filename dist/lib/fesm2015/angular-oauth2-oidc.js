@@ -697,10 +697,10 @@ let OAuthService = class OAuthService extends AuthConfig {
     }
     setupExpirationTimers() {
         if (this.hasValidAccessToken()) {
-            this.setupAccessTokenTimer();
+            //this.setupAccessTokenTimer();
         }
         if (this.hasValidIdToken()) {
-            this.setupIdTokenTimer();
+            //this.setupIdTokenTimer();
         }
     }
     setupAccessTokenTimer() {
